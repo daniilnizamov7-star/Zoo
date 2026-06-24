@@ -131,7 +131,13 @@
     overflow: hidden;
   }
   .modal-media video, .modal-media img {
-    width: 100%; height: 100%; object-fit: contain; background: #0d1f0d;
+    width: 100%; height: 100%; object-fit: cover;
+  }
+
+  @media (max-width: 600px) {
+    .modal-media {
+      aspect-ratio: 1 / 1;
+    }
   }
   .modal-media .media-placeholder { font-size: 72px; opacity: 0.6; display:flex; align-items:center; justify-content:center; height:100%; }
 
