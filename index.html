@@ -337,10 +337,7 @@ function renderPins() {
     pin.className = 'animal-pin';
     pin.style.left = animal.pos.left + '%';
     pin.style.top  = animal.pos.top  + '%';
-    pin.innerHTML = `
-      <div class="pin-emoji">${animal.emoji}</div>
-      <div class="pin-label">${animal.name}</div>
-    `;
+    pin.innerHTML = `<div class="pin-emoji">${animal.emoji}</div>`;
     pin.onclick = () => { if (!editorMode) openModal(animal); };
     wrapper.appendChild(pin);
   });
