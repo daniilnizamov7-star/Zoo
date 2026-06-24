@@ -147,10 +147,13 @@
 
   /* Мобильный — видео сверху, текст снизу */
   @media (max-width: 600px) {
-    .modal-overlay { align-items: flex-end; }
+    .modal-overlay {
+      align-items: flex-end;
+      padding-top: env(safe-area-inset-top, 20px);
+    }
     .modal {
       flex-direction: column;
-      max-height: 88vh;
+      max-height: 82vh;
       border-radius: 16px 16px 0 0;
     }
     .modal-media {
